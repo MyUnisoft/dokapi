@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "object"
+    }
+  },
+  "required": ["title", "menu"]
+}
