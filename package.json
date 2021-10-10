@@ -46,6 +46,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "ajv": "^8.6.3"
   }
 }

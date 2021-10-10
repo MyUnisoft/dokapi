@@ -4,6 +4,7 @@
 
 // Import Internals
 import * as DokapiConfig from "./configuration";
+import { walkDokapiMenu } from "./menuWalker";
 
 export interface generateDocumentationOptions {
   /** Default: `docs` */
@@ -15,5 +16,7 @@ export async function generateDocumentation(location: string, options: generateD
   console.log(outDir);
 
   const config = await DokapiConfig.read(location);
-  console.log(config);
+  for await (const any of walkDokapiMenu(location, config.menu)) {
+    console.log(any);
+  }
 }
