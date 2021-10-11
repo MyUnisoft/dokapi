@@ -1,0 +1,10 @@
+title = "MyUnisoft Partners API"
+
+[[menu]]
+title = "Introduction"
+path = "introduction"
+
+[[menu]]
+title = "Products"
+path = "products"
+collapsable = true

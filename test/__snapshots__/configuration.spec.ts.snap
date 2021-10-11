@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`read should be able to READ a valid dokaconfig.config.toml: ValidDokapiConfig 1`] = `
+Object {
+  "menu": Array [
+    Object {
+      "path": "introduction",
+      "title": "Introduction",
+    },
+    Object {
+      "collapsable": true,
+      "path": "products",
+      "title": "Products",
+    },
+  ],
+  "title": "MyUnisoft Partners API",
+}
+`;

@@ -53,9 +53,9 @@ export async function read(location: string): Promise<DokapiConfiguration> {
 
   const validate = kSchemaValidator.compile(schema);
   if (!validate(manifest)) {
-    console.log(validate.errors);
+    const { message } = validate.errors![0];
 
-    throw new Error("Unable to validate Dokapi configuration");
+    throw new Error(`Unable to validate Dokapi configuration, Reason: ${message}`);
   }
 
   return manifest as unknown as DokapiConfiguration;
