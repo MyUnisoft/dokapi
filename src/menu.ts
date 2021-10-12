@@ -31,20 +31,20 @@ export async function* walk(
     const readmePath = stat.isDirectory() ? path.join(menuPath, "README.md") : menuPath;
     const readmeStr = await fs.readFile(readmePath, "utf-8");
 
-    const title = menu?.title ?? utils.searchMarkdownHeadTitle(readmeStr);
+    const title = menu.title ?? utils.searchMarkdownHeadTitle(readmeStr);
     if (typeof title === "undefined" || title === null) {
       throw new Error(`Unable to found a title for path: ${menuPath}`);
     }
 
     yield {
       title,
-      collapsable: menu?.collapsable ?? false,
+      collapsable: menu.collapsable ?? false,
       subMenu,
       html: md.render(readmeStr)
     };
 
     if (Array.isArray(menu.menu)) {
-      yield* walk(menuPath, menu.menu, true);
+      yield* walk(stat.isDirectory() ? menuPath : path.dirname(menuPath), menu.menu, true);
     }
   }
 }

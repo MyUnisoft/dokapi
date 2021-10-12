@@ -1,10 +1,9 @@
 title = "MyUnisoft Partners API"
 
 [[menu]]
-title = "Introduction"
+title = "Hello world"
 path = "introduction"
 
 [[menu]]
-title = "Products"
-path = "products"
+path = "products.MD"
 collapsable = true

@@ -5,12 +5,11 @@ Object {
   "menu": Array [
     Object {
       "path": "introduction",
-      "title": "Introduction",
+      "title": "Hello world",
     },
     Object {
       "collapsable": true,
-      "path": "products",
-      "title": "Products",
+      "path": "products.MD",
     },
   ],
   "title": "MyUnisoft Partners API",
